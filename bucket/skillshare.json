@@ -1,0 +1,35 @@
+﻿{
+    "version": "0.20.25",
+    "description": "One source of truth for AI CLI skills, agents, rules, commands & more. Sync everywhere with one command",
+    "homepage": "https://github.com/runkids/skillshare",
+    "license": "MIT",
+    "notes": "Run 'skillshare init' to configure, then 'skillshare sync' to sync your skills. Use 'skillshare --help' for all commands.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/runkids/skillshare/releases/download/v0.20.25/skillshare_0.20.25_windows_amd64.zip",
+            "hash": "1603cdce33ac4660ff049a71815feb57522eba40a8ed094d1bbf7e283918089a"
+        },
+        "arm64": {
+            "url": "https://github.com/runkids/skillshare/releases/download/v0.20.25/skillshare_0.20.25_windows_arm64.zip",
+            "hash": "47ed84513f260f8f53669dbda0866408d2ceef18e4465c3ee750e9f5442fcbdb"
+        }
+    },
+    "bin": "skillshare.exe",
+    "checkver": {
+        "github": "https://github.com/runkids/skillshare"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/runkids/skillshare/releases/download/v$version/skillshare_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/runkids/skillshare/releases/download/v$version/skillshare_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/runkids/skillshare/releases/download/v$version/checksums.txt",
+            "find": "(.{64})\\s+$basename"
+        }
+    }
+}
